@@ -2,13 +2,13 @@ SuperUser="sudo"
 CuckooUser="cuckoo"
 TempDirectory=$(pwd)
 
-create_cuckoo_user(){
+CreateCuckooUser(){
     $SuperUser adduser  --disabled-password -gecos "" ${CuckooUser}
     $SuperUser usermod -G vboxusers ${CuckooUser}
     return 0
 }
 
-create_hostonly_iface(){
+CreateHostOnlyInterface(){
     $SuperUser vboxmanage hostonlyif create
     $SuperUser iptables -A FORWARD -o eth0 -i vboxnet0 -s 192.168.56.0/24 -m conntrack --ctstate NEW -j ACCEPT
     $SuperUser iptables -A FORWARD -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
@@ -17,12 +17,12 @@ create_hostonly_iface(){
     return 0
 }
 
-setcap(){
+SettingUpTcpDump(){
     $SuperUser /bin/bash -c 'setcap cap_net_raw,cap_net_admin=eip /usr/sbin/tcpdump' 2>&/dev/null
     return 0
 }
 
-build_jansson(){
+Jansson(){
     cd jansson
     autoreconf -vi --force
     ./configure
@@ -33,7 +33,7 @@ build_jansson(){
     return 0
 }
 
-build_yara(){
+Yara(){
     cd yara
     ./bootstrap.sh
     $SuperUser autoreconf -vi --force
@@ -46,14 +46,14 @@ build_yara(){
     return 0
 }
 
-build_cuckoo(){
+Cuckoo(){
     cd cuckoo
     $SuperUsersudo pip install -r requirements.txt
     cd ${TempDirectory}
     return 0
 }
 
-build_volatility(){
+Volatility(){
     tar xvf volatility-2.4.tar.gz
     cd volatility-2.4/
     $SuperUser python setup.py build
@@ -61,7 +61,7 @@ build_volatility(){
     return 0
 }
 
-build_distorm(){
+Distorm(){
     cd distorm/
     $SuperUser python setup.py build
     $SuperUser python setup.py install
@@ -69,20 +69,15 @@ build_distorm(){
 }
 
 # Create user and clone repos
-create_cuckoo_user "Creating cuckoo user" "Could not create cuckoo user"
+CreateCuckooUser "Creating cuckoo user" "Could not create cuckoo user"
 
 # Build packages
-    
-build_jansson "Building jansson"
-build_yara "Building yara"
-build_distorm "Building distorm"
-build_volatility "Building volatility"
-build_cuckoo "Building cuckoo"
-
-# Configuration
-fix_django_version "Fixing django problems on old versions"
-enable_mongodb "Enabling mongodb in cuckoo"
+Yara "Building yara"
+Jansson "Building jansson"
+Distorm "Building distorm"
+Volatility "Building volatility"
+Cuckoo "Building cuckoo"
 
 # Networking (latest, because sometimes it crashes...)
-create_hostonly_iface "Creating hostonly interface for cuckoo"
-setcap "Setting capabilities"
+CreateHostOnlyInterface "Creating hostonly interface for cuckoo"
+SettingUpTcpDump "Setting capabilities"
