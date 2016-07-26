@@ -14,10 +14,11 @@ Cuckoo is an open source automated malware analysis system. It’s used to autom
 C3phalex1n Cuckoo Automate Installer is a tool that designed to install cuckoo sandbox required packages and tools automatically. This script required Python 3+ and Pip3 to work correctly, so before running this script please install Python3 and Pip3. Also, I should mention here, This script just tested successfully on Ubuntu 16 x64.
 
 ## Requirements:
-  1. Ubuntu 16+
-  2. Python 3+
-  3. Pip3
-  4. git
+  1. Ubuntu 16 x86-x64
+  2. Virtualbox
+  3. Python 3+
+  4. Pip3
+  5. git
   
 <p align="center">
   <img src="http://myfreetime.ir/Images/Potato.JPG" />
