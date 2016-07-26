@@ -19,4 +19,4 @@ C3phalex1n Cuckoo Automate Installer is a tool that designed to install cuckoo s
   3. Pip3
   4. git
   
-                              ![alt tag](http://myfreetime.ir/Images/Potato.JPG)
+![alt tag](http://myfreetime.ir/Images/Potato.JPG)
