@@ -11,14 +11,13 @@ Cuckoo is an open source automated malware analysis system. It’s used to autom
 
 # What is C3phalex1n Cuckoo Sandbox Automate Installer?
 
-C3phalex1n Cuckoo Automate Installer is a tool that designed to install cuckoo sandbox required packages and tools automatically. This script required Python 3+ and Pip3 to work correctly, so before running this script please install Python3 and Pip3. Also, I should mention here, This script just tested successfully on Ubuntu 16 x64.
+C3phalex1n Cuckoo Automate Installer is a tool that designed to install cuckoo sandbox required packages and tools automatically. This script required Python 3+ and Pip3 to work correctly, so before running this script please install Python3 and Pip3. Also, I should mention here, This script just tested successfully on Ubuntu 16 x64. Furthermore, you have to install virtualbox on your system, because I assume you want to work with this virtualization software with by Cuckoo Sandbox. 
 
 ## Requirements:
   1. Ubuntu 16 x86-x64
-  2. Virtualbox
-  3. Python 3+
-  4. Pip3
-  5. git
+  2. Python 3+
+  3. Pip3
+  4. git
   
 <p align="center">
   <img src="http://myfreetime.ir/Images/Potato.JPG" />
