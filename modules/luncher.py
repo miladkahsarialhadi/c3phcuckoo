@@ -19,18 +19,21 @@ class Luncher():
             raise EnvironmentError("Need to be root!")
     
     def update_ubuntu(self):
-        self.aptUp = "apt-get update"
-        self.aptUpG = "apt-get upgrade"
-        self.distUp = "apt-get dist-upgrade"
+        self.aptUp = "sudo apt-get update"
+        self.aptUpG = "sudo apt-get upgrade -y"
+        self.distUp = "sudo apt-get dist-upgrade -y"
         
         self.color.print_green("[+] Phase 1 : Upgrading of the ubuntu repository is starting:")
         
+        self.color.print_purple("\t[*] apt repository is updating.")
         if (subprocess.run(self.aptUp.split(), stdout=DEVNULL, stderr=DEVNULL)):
-            self.color.print_blue("\t[+] apt repository updated")
-            
+            self.color.print_blue("\t[+] apt repository updated.")
+        
+        self.color.print_purple("\t[*] apt repository is upgrading.")    
         if (subprocess.run(self.aptUpG.split(), stdout=DEVNULL, stderr=DEVNULL)):
             self.color.print_blue("\t[+] apt repository upgraded") 
             
+        self.color.print_purple("\t[*] apt dist is upgrading.")
         if (subprocess.run(self.distUp.split(), stdout=DEVNULL, stderr=DEVNULL)):
             self.color.print_blue("\t[+] apt dist upgraded")
         
