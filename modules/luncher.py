@@ -95,7 +95,7 @@ class Luncher():
         else:
             self.color.print_blue("\t[+] Cloning of the Jonsson isn't finished.")
         
-        if (subprocess.run(self.getDistorm.split(), stdout=DEVNULL, stderr=DEVNULL)):
+        if (self.git("clone", self.getDistorm)):
             self.color.print_blue("\t[+] Cloning of the Distorm is finished.")
         else:
             self.color.print_red("\t[+] Cloning of the Distorm is finished.")
