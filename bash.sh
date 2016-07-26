@@ -62,9 +62,7 @@ build_volatility(){
 }
 
 build_distorm(){
-    wget https://distorm.googlecode.com/files/distorm3.zip
-    unzip distorm3.zip
-    cd distorm3/
+    cd distorm/
     $SuperUser python setup.py build
     $SuperUser python setup.py install
     return 0
