@@ -1,4 +1,4 @@
-# C3phalex1n Cuckoo Installer
+# C3phalex1n Cuckoo Automate Installer
 
 Cuckoo is an open source automated malware analysis system. It’s used to automatically run and analyze files and collect comprehensive analysis results that outline what the malware does while running inside an isolated operating system. It can retrieve the following type of results:
 
@@ -9,4 +9,4 @@ Cuckoo is an open source automated malware analysis system. It’s used to autom
   5. Screenshots taken during the execution of the malware.
   6. Full memory dumps of the machines.
 
-C3ph Cuckoo is a tool that designed to install cuckoo sandbox automatically.
+C3phalex1n Cuckoo Automate Installer is a tool that designed to install cuckoo sandbox required packages and tools automatically.
