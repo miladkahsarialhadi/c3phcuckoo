@@ -75,6 +75,7 @@ class Luncher():
         self.getYara = "https://github.com/plusvic/yara.git"
         self.getCuckoo = "https://github.com/cuckoosandbox/cuckoo.git"
         self.getJansson = "https://github.com/akheron/jansson.git"
+        self.getDistorm = "https://github.com/gdabah/distorm.git"
         self.getVolatility = "wget http://downloads.volatilityfoundation.org/releases/2.4/volatility-2.4.tar.gz"
         
         self.color.print_green("[+] Phase 4 : Getting of the softwares is starting:")
@@ -94,6 +95,11 @@ class Luncher():
         else:
             self.color.print_blue("\t[+] Cloning of the Jonsson isn't finished.")
         
+        if (subprocess.run(self.getDistorm.split(), stdout=DEVNULL, stderr=DEVNULL)):
+            self.color.print_blue("\t[+] Cloning of the Distorm is finished.")
+        else:
+            self.color.print_red("\t[+] Cloning of the Distorm is finished.")
+            
         if (subprocess.run(self.getVolatility.split(), stdout=DEVNULL, stderr=DEVNULL)):
             self.color.print_blue("\t[+] Cloning of the Volatility is finished.")
         else:
