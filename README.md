@@ -18,7 +18,13 @@ C3phalex1n Cuckoo Automate Installer is a tool that designed to install cuckoo s
   2. Python 3+
   3. Pip3
   4. git
-  
+
+# How to run the program?
+In order to run this program correctly, you must have root privilege upon linux machine. So, you have to run this program with following command:
+
+> sudo python3 main.py
+> Enter your root password.
+
 <p align="center">
   <img src="http://myfreetime.ir/Images/Potato.JPG" />
 </p>
