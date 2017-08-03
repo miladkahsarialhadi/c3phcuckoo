@@ -9,9 +9,9 @@ Cuckoo is an open source automated malware analysis system. It’s used to autom
   5. Screenshots taken during the execution of the malware.
   6. Full memory dumps of the machines.
 
-# What is C3phalex1n Cuckoo Sandbox Automate Installer - Cuckins?
+# What is Cuckins?
 
-C3phalex1n Cuckoo Automate Installer -- Cuckins -- is a tool that designed to install cuckoo sandbox required packages and tools automatically. This script required Python 3+ and Pip3 to work correctly, so before running this script please install Python3 and Pip3. Also, I should mention here, This script just tested successfully on Ubuntu 16 x64. Furthermore, you have to install virtualbox on your system, because I assume you want to work with this virtualization software with by Cuckoo Sandbox. 
+Cuckins is a tool that designed to install cuckoo sandbox required packages and tools automatically. This script required Python 3+ and Pip3 to work correctly, so before running this script please install Python3 and Pip3. Also, I should mention here, This script just tested successfully on Ubuntu 16 x64. Furthermore, you have to install virtualbox on your system, because I assume you want to work with this virtualization software with by Cuckoo Sandbox. 
 
 ## Requirements:
   1. Ubuntu 16 x86-x64
