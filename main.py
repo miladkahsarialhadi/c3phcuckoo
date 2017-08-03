@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-    C3ph Cuckoo is a tool that designed to install cuckoo sandbox automatically. 
+    Cuckins is a tool that designed to install cuckoo sandbox automatically. 
     
     Author      : Milad Kahsari Alhadi @c3phalexin
     Email       : the.cephalexin[at]gmail[dot].com
