@@ -106,7 +106,7 @@ class Headers():
         bracketF = self.colors.BLUE + "}" + self.colors.ENDC
         
         print("\t\t--=" + bracketS + self.colors.CYAN + "Written by Milad Kahsari Alhadi - C3phalex1n" + self.colors.ENDC + bracketF)
-        print("\t\t--=" + bracketS + self.colors.GREEN + "C3phalex1n Cuckoo Auto Installer - Potato" + self.colors.ENDC + bracketF)
+        print("\t\t--=" + bracketS + self.colors.GREEN + "C3phalex1n Cuckoo Auto Installer - Cuckins" + self.colors.ENDC + bracketF)
         print("\t\t--=" + bracketS + "Update Date : [" + self.colors.RED + "24.01.2016" + self.colors.ENDC + "]" + bracketF)
         
         print("\n\n")
